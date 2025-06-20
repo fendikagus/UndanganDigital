@@ -18,3 +18,13 @@ const countdown = () => {
 };
 
 setInterval(countdown, 1000);
+// Ambil nama dari URL
+const urlParams = new URLSearchParams(window.location.search);
+const namaTamu = urlParams.get('g');
+document.getElementById("namaTamu").innerText = namaTamu ? decodeURIComponent(namaTamu) : "Tamu Undangan";
+
+// Fungsi buka undangan
+function bukaUndangan() {
+  document.querySelector('.opening').style.display = 'none';
+  document.querySelector('.container').style.display = 'block';
+}
