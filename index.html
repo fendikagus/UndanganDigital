@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Fendik & Amanda</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(to bottom right, #d8b4e2, #f3e5f5);
+            text-align: center; 
+            padding: 50px; 
+            color: #4a0072;
+        }
+        .card {
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+        h1 { color: #6a1b9a; }
+        a.button {
+            display: inline-block; 
+            margin: 10px auto; 
+            background: #8e24aa; 
+            color: white; 
+            padding: 10px 20px; 
+            border-radius: 8px; 
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        a.button:hover {
+            background: #6a1b9a;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Undangan Pernikahan</h1>
+        <p id="namaTamu">Tamu Undangan</p>
+        <h2>Fendik Agus Prastyo & Amanda Talia Kajol</h2>
+        <p>Selasa, 7 Oktober 2025<br> Jam Bebas</p>
+        <p>Jalan Kolonel Sugiono G 7 RT. 05/RW.01 No. 42 Mergosono Kota Malang</p>
+        <a class="button" href="https://maps.app.goo.gl/JXcNyU9YWAGofUoX7" target="_blank">Lihat Lokasi</a><br><br>
+        <a class="button" href="https://wa.me/6283892917327" target="_blank">Konfirmasi via WhatsApp</a>
+        <p>Hadiah dapat dikirim ke rekening:<br><strong>BCA Digital 006772237919</strong></p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nama = params.get('g');
+        if(nama) {
+            document.getElementById('namaTamu').textContent = "Kepada Yth: " + decodeURIComponent(escape(window.atob(nama)));
+        }
+    </script>
+</body>
+</html>
