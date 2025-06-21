@@ -71,6 +71,12 @@ iframe {
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   text-align: center;
+  color: #000000;
+}
+.opening .card p,
+.opening .card h1,
+.opening .card h2 {
+    color: #000000; /* Paksa semua elemen teks hitam */
 }
 
 .opening button {
