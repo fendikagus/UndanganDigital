@@ -72,6 +72,7 @@ iframe {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   text-align: center;
   color: #000000;
+  animation: fadeScale 1s ease-out forwards;
 }
 .opening .card p,
 .opening .card h1,
@@ -87,4 +88,13 @@ iframe {
   border-radius: 30px;
   cursor: pointer;
 }
-
+@keyframes fadeScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
