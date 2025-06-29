@@ -485,7 +485,7 @@ footer li {
 /* Mobile */
 @media (max-width: 576px) {
     html {
-        font-size: 40%;
+        font-size: 60%;
     }
 
     .timeline li .timeline-image {
